@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    *  Copyright (C) 2002-2015  The FreeCol Team
+    *
+    *  This file is part of FreeCol.
+    *
+    *  FreeCol is free software: you can redistribute it and/or modify
+    *  it under the terms of the GNU General Public License as published by
+    *  the Free Software Foundation, either version 2 of the License, or
+    *  (at your option) any later version.
+    *
+    *  FreeCol is distributed in the hope that it will be useful,
+    *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+    *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    *  GNU General Public License for more details.
+    *
+    *  You should have received a copy of the GNU General Public License
+    *  along with FreeCol.  If not, see <http://www.gnu.org/licenses/>.
+
+    In case of incompatible changes, please update version number and
+    XSD schema for validation.
+-->
+<freecol-specification id="belgium">
+  <european-nation-types>
+    <european-nation-type id="model.nationType.ref" preserve="true">
+      <!-- Shorten REF sail time. -->
+      <modifier id="model.modifier.sailHighSeas"
+                type="additive" value="-1"/>
+    </european-nation-type>
+
+    <european-nation-type id="model.nationType.expansionist"
+                          extends="model.nationType.default">
+      <unit id="pioneer" type="model.unit.expertFarmer"
+            role="model.role.pioneer"/>
+      <unit id="soldier" type="model.unit.masterCarpenter"
+            role="model.role.soldier"/>
+      <modifier id="model.goods.grain" index="80"
+                type="additive" value="3"/>
+      <modifier id="model.goods.hammers" index="80"
+                type="additive" value="2">
+        <scope ability-id="model.ability.person" />
+      </modifier>
+    </european-nation-type>
+    <european-nation-type id="model.nationType.sugarplanter"
+                          extends="model.nationType.default">
+      <unit id="pioneer" type="model.unit.masterSugarPlanter"
+            role="model.role.pioneer"/>
+      <modifier id="model.goods.sugar" index="80"
+                type="additive" value="3"/>
+    </european-nation-type>
+    <european-nation-type id="model.nationType.sailor"
+                          extends="model.nationType.default">
+      <unit id="ship" type="model.unit.merchantman"/>
+      <unit id="pioneer" type="model.unit.expertFarmer"
+            role="model.role.pioneer"/>
+      <unit id="soldier" type="model.unit.veteranSoldier"
+            role="model.role.soldier"/>
+    </european-nation-type>
+    <european-nation-type id="model.nationType.warrior"
+                          extends="model.nationType.default">
+      <unit id="pioneer" type="model.unit.masterGunsmith"
+            role="model.role.pioneer"/>
+      <unit id="soldier" type="model.unit.veteranSoldier"
+            role="model.role.soldier"/>
+      <modifier id="model.goods.grain" index="80"
+                type="additive" value="2"/>
+      <modifier id="model.goods.muskets" index="80"
+                type="additive" value="2">
+        <scope ability-id="model.ability.person" />
+      </modifier>
+    </european-nation-type>
+  </european-nation-types>
+
+  <nations>
+    <nation id="model.nation.belgium" color="0x9999ff"
+            nation-type="model.nationType.sugarplanter" selectable="true"
+            preferred-latitude="45" ref="model.nation.belgiumREF"/>
+    <nation id="model.nation.italy" color="0x1e9167"
+            nation-type="model.nationType.sailor" selectable="true"
+            preferred-latitude="25" ref="model.nation.italyREF"/>
+    <nation id="model.nation.otomanempire" color="0x660000"
+            nation-type="model.nationType.warrior" selectable="true"
+            preferred-latitude="29" starts-on-east-coast="false" 
+ref="model.nation.otomanempireREF"/>
+    <nation id="model.nation.holygermanempire" color="0x29293D"
+            nation-type="model.nationType.expansionist" selectable="true"
+            preferred-latitude="-30"
+ref="model.nation.holygermanempireREF"/>
+    <nation id="model.nation.belgiumREF" color="0x9966ff"
+            nation-type="model.nationType.ref"/>
+    <nation id="model.nation.italyREF" color="0x999999"
+            nation-type="model.nationType.ref"/>
+    <nation id="model.nation.otomanempireREF" color="0x660033"
+            nation-type="model.nationType.ref"/>
+    <nation id="model.nation.holygermanempireREF" color="0xff0066"
+            nation-type="model.nationType.ref"/>
+   </nations>
+</freecol-specification>
