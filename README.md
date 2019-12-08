@@ -23,6 +23,12 @@ Mods that change the behavior of units.
 * [Shippable Wagons](https://github.com/HighwayofLife/shippableWagons)
   * Allows the ability to load wagons onto Galleons
 
+### Colony / Buildings
+Mods that change or add behavior of buildings or inside colonies
+
+* [Basic Buildings](https://github.com/HighwayofLife/basicBuildings)
+  * Makes a colony entirely empty of buildings except for a carpenter house, depot, and pasture.
+
 ### Complete Mod
 Complete mods change large amounts of behaviors, add new rulesets, etc.
 
