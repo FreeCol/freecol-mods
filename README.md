@@ -29,6 +29,12 @@ Mods that change or add behavior of buildings or inside colonies
 * [Basic Buildings](https://github.com/HighwayofLife/basicBuildings)
   * Makes a colony entirely empty of buildings except for a carpenter house, depot, and pasture.
 
+### Nations
+Mods that add nations or change nations behaviors.
+
+* [New Nations by Mazim](mods/README.md#new-nations-by-mazim)
+  * Adds Italy, Belgium, Germany and Otoman Empire nations.
+
 ### Complete Mod
 Complete mods change large amounts of behaviors, add new rulesets, etc.
 
