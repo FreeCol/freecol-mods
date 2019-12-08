@@ -20,7 +20,7 @@
     In case of incompatible changes, please update version number and
     XSD schema for validation.
 -->
-<freecol-specification id="belgium">
+<freecol-specification id="belgium" version="2.0">
   <european-nation-types>
     <european-nation-type id="model.nationType.ref" preserve="true">
       <!-- Shorten REF sail time. -->
@@ -80,7 +80,7 @@
             preferred-latitude="25" ref="model.nation.italyREF"/>
     <nation id="model.nation.otomanempire" color="0x660000"
             nation-type="model.nationType.warrior" selectable="true"
-            preferred-latitude="29" starts-on-east-coast="false" 
+            preferred-latitude="29" starts-on-east-coast="false"
 ref="model.nation.otomanempireREF"/>
     <nation id="model.nation.holygermanempire" color="0x29293D"
             nation-type="model.nationType.expansionist" selectable="true"
